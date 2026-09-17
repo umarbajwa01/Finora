@@ -1,0 +1,29 @@
+.chart-tooltip {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-md);
+  font-size: 12.5px;
+  min-width: 140px;
+}
+
+.chart-tooltip__date {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.chart-tooltip__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.chart-tooltip__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.chart-tooltip__dot--income { background: var(--color-green); }
+.chart-tooltip__dot--expense { background: var(--color-red); }
+
+.chart-tooltip__key { color: var(--text-secondary); flex: 1; }
+.chart-tooltip__val { font-weight: 600; color: var(--text-primary); }

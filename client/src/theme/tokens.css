@@ -1,0 +1,114 @@
+/*
+  Finora — luxury private-banking palette.
+  Warm espresso / ivory / champagne / bronze. No blue, no neon, no SaaS-purple.
+  Light and dark are each hand-tuned — dark mode is not an inverted light mode.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand */
+  --color-obsidian: #151412;
+  --color-espresso: #211d18;
+  --color-ivory: #f5f0e8;
+  --color-champagne: #d8c29d;
+  --color-gold: #b89b62;
+  --color-bronze: #8f7448;
+  --color-olive: #30352a;
+  --color-forest: #26352c;
+  --color-taupe: #817668;
+  --color-beige: #ded6c8;
+  --color-red: #9b5c52;
+  --color-red-soft: #f3e6e3;
+  --color-green: #4f6f52;
+  --color-green-soft: #e9efe7;
+  --color-amber: #b8863f;
+  --color-amber-soft: #f6ecdc;
+
+  /* Surfaces — light */
+  --bg-app: #f7f3ec;
+  --bg-surface: #fffdf9;
+  --bg-surface-raised: #ffffff;
+  --bg-surface-sunken: #efe8db;
+  --border-subtle: #e5dcc9;
+  --border-strong: #d3c6ab;
+
+  /* Text — light */
+  --text-primary: #211d18;
+  --text-secondary: #6b6153;
+  --text-tertiary: #9c9284;
+  --text-inverse: #f5f0e8;
+
+  --accent: var(--color-gold);
+  --accent-strong: var(--color-bronze);
+  --accent-soft: #f1e6d2;
+
+  --shadow-sm: 0 1px 2px rgba(33, 29, 24, 0.06);
+  --shadow-md: 0 6px 20px rgba(33, 29, 24, 0.08);
+  --shadow-lg: 0 20px 48px rgba(33, 29, 24, 0.14);
+  --shadow-hero: 0 30px 60px rgba(21, 20, 18, 0.35);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg-app: #14120f;
+  --bg-surface: #1b1814;
+  --bg-surface-raised: #211d18;
+  --bg-surface-sunken: #0f0d0b;
+  --border-subtle: #322c24;
+  --border-strong: #453d31;
+
+  --text-primary: #f5f0e8;
+  --text-secondary: #b8ac98;
+  --text-tertiary: #7d735f;
+  --text-inverse: #211d18;
+
+  --accent: var(--color-champagne);
+  --accent-strong: var(--color-gold);
+  --accent-soft: rgba(184, 155, 98, 0.16);
+
+  --color-red-soft: rgba(155, 92, 82, 0.18);
+  --color-green-soft: rgba(79, 111, 82, 0.2);
+  --color-amber-soft: rgba(184, 134, 63, 0.18);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+  --shadow-hero: 0 30px 70px rgba(0, 0, 0, 0.7);
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .25s ease, color .25s ease;
+}
+h1, h2, h3, h4, h5, p { margin: 0; }
+button { font-family: inherit; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+input, select, textarea { font-family: inherit; }
+::selection { background: var(--accent-soft); color: var(--accent-strong); }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: var(--radius-full); }
+::-webkit-scrollbar-track { background: transparent; }
+
+.font-display { font-family: var(--font-display); }

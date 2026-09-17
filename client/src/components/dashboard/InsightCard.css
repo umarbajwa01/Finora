@@ -1,0 +1,25 @@
+.insight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.insight-card p { font-size: 13.5px; color: var(--text-primary); line-height: 1.5; }
+
+.insight-card__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.insight-card.is-positive .insight-card__icon { background: var(--color-green-soft); color: var(--color-green); }
+.insight-card.is-warning .insight-card__icon { background: var(--color-red-soft); color: var(--color-red); }
+.insight-card.is-info .insight-card__icon { background: var(--accent-soft); color: var(--accent-strong); }

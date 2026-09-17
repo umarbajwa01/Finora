@@ -1,0 +1,114 @@
+.balance-hero {
+  position: relative;
+  background: linear-gradient(155deg, var(--color-espresso) 0%, var(--color-obsidian) 55%, #0d0c0a 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  color: var(--color-ivory);
+  overflow: hidden;
+  box-shadow: var(--shadow-hero);
+  transform-style: preserve-3d;
+  border: 1px solid rgba(216, 194, 157, 0.14);
+}
+
+.balance-hero__sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(216, 194, 157, 0.09) 48%, transparent 62%);
+  pointer-events: none;
+}
+
+.balance-hero__geometry {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translateZ(20px);
+}
+.balance-hero__geometry--1 {
+  width: 220px;
+  height: 220px;
+  top: -100px;
+  right: -60px;
+  background: radial-gradient(circle at 30% 30%, rgba(216, 194, 157, 0.18), transparent 70%);
+}
+.balance-hero__geometry--2 {
+  width: 160px;
+  height: 160px;
+  bottom: -80px;
+  left: -40px;
+  background: radial-gradient(circle at 60% 60%, rgba(184, 155, 98, 0.12), transparent 70%);
+}
+
+.balance-hero__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.balance-hero__label {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-champagne);
+}
+
+.balance-hero__visibility {
+  background: rgba(245, 240, 232, 0.08);
+  border: 1px solid rgba(245, 240, 232, 0.14);
+  border-radius: var(--radius-full);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-beige);
+}
+
+.balance-hero__value {
+  font-size: 44px;
+  font-weight: 500;
+  margin-top: var(--space-4);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.01em;
+}
+
+.balance-hero__change {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+.balance-hero__change.is-positive { color: #a8d1ae; }
+.balance-hero__change.is-negative { color: #dba49c; }
+
+.balance-hero__split {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+.balance-hero__split > div { display: flex; flex-direction: column; gap: 4px; }
+.balance-hero__split-label {
+  font-size: 11.5px;
+  color: var(--color-taupe);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.balance-hero__split-value { font-size: 16px; font-weight: 600; }
+.balance-hero__split-value.is-income { color: #a8d1ae; }
+.balance-hero__split-value.is-expense { color: #dba49c; }
+.balance-hero__divider { width: 1px; height: 28px; background: rgba(245, 240, 232, 0.14); }
+
+@media (max-width: 640px) {
+  .balance-hero { padding: var(--space-6); }
+  .balance-hero__value { font-size: 34px; }
+}

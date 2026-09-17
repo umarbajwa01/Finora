@@ -1,0 +1,168 @@
+.tx-drawer__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(21, 20, 18, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+}
+
+.tx-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 440px;
+  max-width: 100%;
+  background: var(--bg-surface-raised);
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+.tx-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.tx-drawer__header h3 { font-size: 20px; font-weight: 500; }
+.tx-drawer__header button { background: var(--bg-surface-sunken); border: none; border-radius: var(--radius-full); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
+
+.tx-drawer__form {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.tx-type-toggle {
+  display: flex;
+  background: var(--bg-surface-sunken);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  gap: 4px;
+}
+.tx-type-toggle__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.tx-type-toggle__btn.is-expense.is-active { background: var(--color-red-soft); color: var(--color-red); }
+.tx-type-toggle__btn.is-income.is-active { background: var(--color-green-soft); color: var(--color-green); }
+
+.receipt-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.receipt-field__button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 12px var(--space-3);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-sunken);
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.receipt-field__button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+.receipt-field__button:disabled { opacity: 0.7; }
+.receipt-field__hint-icon { margin-left: auto; color: var(--text-tertiary); }
+
+.receipt-field__preview {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.receipt-field__preview img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+.receipt-field__remove {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: rgba(21, 20, 18, 0.65);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tx-recurring-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.tx-recurring-toggle input { width: 16px; height: 16px; accent-color: var(--accent-strong); }
+
+.tx-drawer__error {
+  font-size: 13px;
+  color: var(--color-red);
+  background: var(--color-red-soft);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.tx-drawer__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  margin-top: auto;
+}
+
+.tx-drawer__success {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--text-secondary);
+}
+.tx-drawer__success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--color-green-soft);
+  color: var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .tx-drawer { width: 100%; top: auto; height: 88vh; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+}

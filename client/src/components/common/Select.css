@@ -1,0 +1,32 @@
+.select__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.select__control:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.select__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 12px 36px 12px 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  appearance: none;
+  width: 100%;
+}
+
+.select__chevron {
+  position: absolute;
+  right: 12px;
+  color: var(--text-tertiary);
+  pointer-events: none;
+}

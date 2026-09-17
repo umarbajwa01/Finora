@@ -1,0 +1,15 @@
+.recent-tx__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+.recent-tx__header h3 { font-size: 18px; font-weight: 500; }
+.recent-tx__view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-strong);
+}

@@ -1,0 +1,55 @@
+.budget-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+
+.budget-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.budget-card__actions { display: flex; gap: 4px; }
+.budget-card__actions button {
+  background: var(--bg-surface-sunken);
+  border: none;
+  border-radius: var(--radius-sm);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+.budget-card__actions button:hover { color: var(--text-primary); }
+.budget-card__actions button.is-danger:hover { color: var(--color-red); background: var(--color-red-soft); }
+
+.budget-card__amounts { display: flex; align-items: baseline; }
+.budget-card__used { font-size: 22px; font-weight: 600; color: var(--text-primary); }
+.budget-card__total { font-size: 14px; color: var(--text-tertiary); }
+
+.budget-card__track {
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-sunken);
+  overflow: hidden;
+}
+.budget-card__fill { height: 100%; border-radius: var(--radius-full); }
+.budget-card__fill.is-ontrack { background: var(--color-green); }
+.budget-card__fill.is-warning { background: var(--color-amber); }
+.budget-card__fill.is-critical { background: #c2762e; }
+.budget-card__fill.is-exceeded { background: var(--color-red); }
+
+.budget-card__footer { display: flex; align-items: center; justify-content: space-between; }
+.budget-card__status { font-size: 12.5px; font-weight: 600; }
+.budget-card__status.is-ontrack { color: var(--color-green); }
+.budget-card__status.is-warning { color: var(--color-amber); }
+.budget-card__status.is-critical { color: #c2762e; }
+.budget-card__status.is-exceeded { color: var(--color-red); }
+.budget-card__days { font-size: 12px; color: var(--text-tertiary); }

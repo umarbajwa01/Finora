@@ -1,0 +1,18 @@
+.budgets-page__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.budgets-page__hint { font-size: 13.5px; color: var(--text-secondary); }
+
+.budgets-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .budgets-page__toolbar { flex-direction: column; align-items: stretch; }
+}
